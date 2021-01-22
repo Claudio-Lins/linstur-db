@@ -98,7 +98,7 @@ const Resumo = (data) => (
     );
 
     Resumo.getInitialProps = async () => {
-      var response = await axios.get('http://localhost:8080/models/kms');
+      var response = await axios.get('mongodb+srv://clins:linstur-db@cluster0.zwsrt.mongodb.net/linstur');
       //console.log(response.data);
       return { response: response.data }
   }

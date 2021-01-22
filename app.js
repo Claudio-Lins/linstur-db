@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors')
 
 
-require('./models/kms')
+require('/models/kms')
 const Kms = mongoose.model('Kms')
 
 const app = express();
@@ -39,7 +39,7 @@ app.get("/kms", (req, res) => {
   })
 });
 
-app.post("/kms", (req, res) => {
+app.post("/models/kms", (req, res) => {
   Kms.create(req.body, (err) => {
     if(err) return res.status(400).json({
       error:true,
